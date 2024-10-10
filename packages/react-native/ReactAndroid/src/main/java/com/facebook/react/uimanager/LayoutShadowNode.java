@@ -24,6 +24,7 @@ import com.facebook.yoga.YogaOverflow;
 import com.facebook.yoga.YogaPositionType;
 import com.facebook.yoga.YogaUnit;
 import com.facebook.yoga.YogaWrap;
+import android.util.Log;
 
 /**
  * Supply setters for base view layout properties such as width, height, flex properties, borders,
@@ -643,6 +644,7 @@ public class LayoutShadowNode extends ReactShadowNodeImpl {
 
   @ReactProp(name = ViewProps.DISPLAY)
   public void setDisplay(@Nullable String display) {
+    Log.w("GSLOG", "setDisplay - " + display);
     if (isVirtual()) {
       return;
     }
